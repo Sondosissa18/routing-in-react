@@ -7,10 +7,10 @@ pages:
     - rm -rf public
     - mv build public
     - cp public/index.html public/404.html
-artifacts:
-    paths:
+    artifacts:
+      paths:
       - public
-  only:
+    only:
     - master
     variables:
       PUBLIC_URL: "/routing-in-react"
