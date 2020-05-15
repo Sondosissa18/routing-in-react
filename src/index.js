@@ -9,7 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 
 //wrap our default App in the BrowserRouter we just imported
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <App />
   </BrowserRouter>,
   document.getElementById("root")
