@@ -1,0 +1,16 @@
+image: node:alpine
+pages:
+  stage: deploy
+  script:
+    - npm install
+    - npm run build
+    - rm -rf public
+    - mv build public
+    - cp public/index.js public/404.html
+artifacts:
+    paths:
+      - public
+  only:
+    - master
+    variables:
+      PUBLIC_URL: "/routing-in-react"
